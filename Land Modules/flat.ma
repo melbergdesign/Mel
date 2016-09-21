@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
-//Name: Chasm-L.ma
-//Last modified: Wed, Sep 21, 2016 02:41:55 PM
+//Name: flat.ma
+//Last modified: Wed, Sep 21, 2016 02:46:31 PM
 //Codeset: UTF-8
 requires maya "2017";
 currentUnit -l meter -a degree -t film;
@@ -11,18 +11,18 @@ fileInfo "cutIdentifier" "201606150345-997974";
 fileInfo "osv" "Mac OS X 10.11.6";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
-	rename -uid "A45FBE54-074B-4C1D-2460-39A781190420";
+	rename -uid "551B327F-2246-5F3C-7C65-19844C885BD9";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 62.928267426188334 18.723142596443523 3.5796186880498566 ;
-	setAttr ".r" -type "double3" -16.538352729699543 86.599999999995561 -2.6814611058502854e-14 ;
+	setAttr ".t" -type "double3" 61.220195519887028 14.242790154750741 5.7172412510987058 ;
+	setAttr ".r" -type "double3" -13.538352729619303 84.999999999995524 1.8246386188626322e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
-	rename -uid "B8A91BA9-C449-FBE2-BB9D-BD95634C9C2D";
+	rename -uid "E75927E8-5E4B-4550-0E81-AFAE671E16A0";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
 	setAttr ".ncp" 0.001;
 	setAttr ".fcp" 100;
 	setAttr ".fd" 0.05;
-	setAttr ".coi" 65.784245622045717;
+	setAttr ".coi" 66.76387248448998;
 	setAttr ".ow" 0.1;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
@@ -30,12 +30,12 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
-	rename -uid "66C892D6-B84C-F2DE-BB98-088662CD4DFF";
+	rename -uid "9B29DD43-8642-E0AD-FDF0-BD932EC34FFC";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 10.001000000000001 0 ;
 	setAttr ".r" -type "double3" -89.999999999999986 0 0 ;
 createNode camera -s -n "topShape" -p "top";
-	rename -uid "C32F9BB8-3E43-8029-8551-70B100492804";
+	rename -uid "24A461D3-E744-9994-4EFD-158F26375DB2";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".ncp" 0.001;
@@ -50,11 +50,11 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "front";
-	rename -uid "7173A52A-F544-E407-DE9D-129B64E7AC8A";
+	rename -uid "1764B65D-CA4B-72B4-481A-9EB38399A402";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 0 10.001000000000001 ;
 createNode camera -s -n "frontShape" -p "front";
-	rename -uid "5D59AADB-BD44-6691-E132-72BE15D32C86";
+	rename -uid "CEEAB5DB-5245-2B62-DF1F-EEAA56CD4913";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".ncp" 0.001;
@@ -69,19 +69,19 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "side";
-	rename -uid "98D7B1A6-344F-AFB8-4955-2689D6863F19";
+	rename -uid "506FA2FD-B842-B54C-BC02-2581481DDBAA";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 10.001000000000001 0.029079795679334667 -0.17027194420543118 ;
+	setAttr ".t" -type "double3" 10.001000000000001 0 0 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
-	rename -uid "26FD38F8-EB4F-77AF-DE5B-D9BC50958DFB";
+	rename -uid "A1986393-194F-26B6-EE8C-2AB9DFC9D906";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".ncp" 0.001;
 	setAttr ".fcp" 100;
 	setAttr ".fd" 0.05;
 	setAttr ".coi" 10.001000000000001;
-	setAttr ".ow" 0.50935675244930734;
+	setAttr ".ow" 0.3;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -89,75 +89,61 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "pCube1";
-	rename -uid "F66B89DC-484D-80F0-FDE5-E0AE859DAFDE";
+	rename -uid "70FEC5EB-5449-A9B4-2423-98A02C6C05D3";
 createNode mesh -n "pCubeShape1" -p "pCube1";
-	rename -uid "ED8B595F-EF46-5E36-85EF-8E89CBC373E5";
+	rename -uid "46184ECD-0940-22B7-078A-DA8A6522B97C";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.4713362455368042 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[8:15]" -type "float3"  0 0 1.5377921 0 0 1.5377921 
-		0 0 -0.43591267 0 0 -0.43591267 0 0 5.1152329 0 0 5.1152329 0 0 3.1415281 0 0 3.1415281;
+	setAttr -s 8 ".vt[0:7]"  -5 -5 25 5 -5 25 -5 5 25 5 5 25 -5 5 -25
+		 5 5 -25 -5 -5 -25 5 -5 -25;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "1DD690D4-D143-1A87-DCAA-EE9060D32E02";
+	rename -uid "A61010F9-6442-AF6C-C204-01B2CDCD6029";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "D66BBEF2-7C40-57C9-A9D0-09B72D0A757B";
+	rename -uid "89F8F8E0-844D-A78E-26B9-47AED7625D89";
 createNode displayLayer -n "defaultLayer";
-	rename -uid "F56C9A4F-084B-07E9-D851-9CA0CD3D765E";
+	rename -uid "CB182F3F-D44F-2BF9-3EEB-12AC5E64FED2";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "2E822B2C-6845-9A67-19D3-2F9DCA4B2A6D";
+	rename -uid "A58A2E23-FD4A-348D-494C-3DA8339D9F14";
 createNode renderLayer -n "defaultRenderLayer";
-	rename -uid "FC69BC19-BF4A-C160-288F-7F857A1258B0";
+	rename -uid "414990E7-B349-481F-DB7C-0A9AD22FC8EA";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "B5CEEEFE-D944-8764-21E1-D180999B004A";
+	rename -uid "BF4E312A-354E-FB6B-45A2-33B958B2C146";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "6B00284C-F34E-B970-CC5D-CDAE0E6A145C";
-createNode polyCube -n "polyCube1";
-	rename -uid "0BEB64DC-5742-5A8F-70EF-DD805D615391";
-	setAttr ".w" 10;
-	setAttr ".h" 10;
-	setAttr ".d" 50;
-	setAttr ".cuv" 4;
-createNode polySplitRing -n "polySplitRing1";
-	rename -uid "FFB0753E-1A49-8CBA-877E-F2A51F73E404";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 2 "e[6:7]" "e[10:11]";
-	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -5.171238004927976 5.0566957843984994 -25.070316743862911 1;
-	setAttr ".wt" 0.22930997610092163;
-	setAttr ".re" 7;
-	setAttr ".sma" 29.999999999999996;
-	setAttr ".p[0]"  0 0 1;
-	setAttr ".fq" yes;
-createNode polySplitRing -n "polySplitRing2";
-	rename -uid "35A3B2B3-7449-9652-045A-6A97EBF21BC4";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "e[10:13]";
-	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -5.171238004927976 5.0566957843984994 -25.070316743862911 1;
-	setAttr ".wt" 0.35541576147079468;
-	setAttr ".re" 12;
-	setAttr ".sma" 29.999999999999996;
-	setAttr ".p[0]"  0 0 1;
-	setAttr ".fq" yes;
-createNode deleteComponent -n "deleteComponent1";
-	rename -uid "6F31E8D3-FD40-7706-4E8C-A8A9D0C1F871";
-	setAttr ".dc" -type "componentList" 1 "f[6:9]";
-createNode polyCloseBorder -n "polyCloseBorder1";
-	rename -uid "AF1FA79A-AA4B-887C-C044-B4BCE59CE360";
-	setAttr ".ics" -type "componentList" 3 "e[12]" "e[14]" "e[16:17]";
-createNode polyCloseBorder -n "polyCloseBorder2";
-	rename -uid "BD8033AD-A14A-8220-C7D8-F0AF3513B70A";
-	setAttr ".ics" -type "componentList" 1 "e[20:23]";
+	rename -uid "74A90066-A943-84FC-47C2-7A827BBDDD6C";
 createNode script -n "uiConfigurationScriptNode";
-	rename -uid "5970EA62-8F42-0C53-2851-69889561206A";
+	rename -uid "9E54DD92-3E43-7D0D-8F1D-5BB33E952BFF";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"top\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
 		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n"
@@ -229,7 +215,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
-	rename -uid "5E90DFA2-D341-E1EB-5B1B-24B33FA55BAE";
+	rename -uid "E867769C-DB47-8379-9105-CE9CC0020A89";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
 select -ne :time1;
@@ -262,20 +248,12 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
-connectAttr "polyCloseBorder2.out" "pCubeShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "polyCube1.out" "polySplitRing1.ip";
-connectAttr "pCubeShape1.wm" "polySplitRing1.mp";
-connectAttr "polySplitRing1.out" "polySplitRing2.ip";
-connectAttr "pCubeShape1.wm" "polySplitRing2.mp";
-connectAttr "polySplitRing2.out" "deleteComponent1.ig";
-connectAttr "deleteComponent1.og" "polyCloseBorder1.ip";
-connectAttr "polyCloseBorder1.out" "polyCloseBorder2.ip";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
-// End of Chasm-L.ma
+// End of flat.ma
